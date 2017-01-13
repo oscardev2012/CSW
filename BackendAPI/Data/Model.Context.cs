@@ -19,7 +19,6 @@ namespace BackendAPI.Data
             : base("name=TestSGSEntities")
         {
             this.Configuration.LazyLoadingEnabled = false;
-            this.Configuration.ProxyCreationEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

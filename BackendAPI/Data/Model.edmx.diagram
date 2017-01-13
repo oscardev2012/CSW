@@ -7,9 +7,9 @@
       <Diagram DiagramId="b41de0ccd53e4ef3b615d873a6eea098" Name="Diagram1">
         <EntityTypeShape EntityType="TestSGSModel.Author" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="TestSGSModel.Book" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="TestSGSModel.Category" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
         <AssociationConnector Association="TestSGSModel.FK_Book_Author" ManuallyRouted="false" />
-        <AssociationConnector Association="TestSGSModel.FK_Book_Category" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="TestSGSModel.Category" Width="1.5" PointX="0.75" PointY="4.875" />
+        <AssociationConnector Association="TestSGSModel.FK_Book_Category" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
