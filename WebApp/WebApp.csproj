@@ -132,7 +132,6 @@
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
-    <Content Include="css\font-awesome.css" />
     <Content Include="css\menu.css" />
     <Content Include="css\okayNav.css" />
     <Content Include="css\styleMaster.css" />

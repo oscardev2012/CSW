@@ -59,7 +59,7 @@
             <!-- cd-popup-container -->
         </div>
 
-        <div id="Error" class="cd-popup" role="alert">
+        <div id="Error"  class="cd-popup" role="alert">
             <div class="cd-popup-container">
                 <p>
                     Can not delete
