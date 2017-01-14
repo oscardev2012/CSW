@@ -7,6 +7,8 @@ var IdAuthor = 0;
 
 
 $(document).ready(function () {
+    $('#Correct').addClass('cd-popup');
+    $('#Error').addClass('cd-popup');
     LoadAuthors();
     LoadCategory();
     AjaxBasicRequest(
@@ -17,8 +19,8 @@ $(document).ready(function () {
                                                    '<thead id="background-table-blue">' +
                                                    '<tr><th>Id</th>' +
                                                    '<th>Name</th>' +
-                                                      '<th>Category</th>' +
-                                                   '<th>Author</th>' +
+                                                      '<th>Author</th>' +
+                                                   '<th>Catgory</th>' +
                                                      '<th>Action</th>' +
                                                    '<th>Action</th>' +
                                                                                                 '</tr></thead>');
@@ -108,7 +110,7 @@ function editRow(indexRow) {
 function deleteRow(indexRow) {
     Id = $('#ContendTable').find('tr:eq(' + (indexRow) + ') td:eq(0)').text();
     AjaxBasicRequest(
-           "http://localhost:51107/api/Book/?id=" + Id + "", "DELETE",
+           "http://localhost:51107/api/Book/?id=" + Id + "", "POST",
      function (jData) {
          Message();
 

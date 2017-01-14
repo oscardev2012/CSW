@@ -1,7 +1,8 @@
 ﻿var Id = 0;
 
 $(document).ready(function () {
-
+    $('#Correct').addClass('cd-popup');
+    $('#Error').addClass('cd-popup');
     AjaxBasicRequest(
              "http://localhost:51107/api/Author", "GET",
        function (jData) {
@@ -73,7 +74,7 @@ function editRow(indexRow) {
 function deleteRow(indexRow) {
     Id = $('#ContendTable').find('tr:eq(' + (indexRow) + ') td:eq(0)').text();
     AjaxBasicRequest(
-           "http://localhost:51107/api/Author/?id=" + Id + "", "DELETE",
+           "http://localhost:51107/api/Author/?id=" + Id + "", "POST",
      function (jData) {
          Message();
 
