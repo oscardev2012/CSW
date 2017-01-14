@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace BackendAPI.Controllers
 {
+
     /// <summary>
     /// Author Controller Class
     /// </summary>
@@ -50,7 +51,8 @@ namespace BackendAPI.Controllers
 
 
         // DELETE: /Author/
-        public int Delete(int id)
+     
+        public int Remove(int id)
         {
             try
             {

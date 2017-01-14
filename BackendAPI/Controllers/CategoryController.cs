@@ -54,7 +54,7 @@ namespace BackendAPI.Controllers
 
 
         // DELETE api/CATEGORY
-        public int Delete(int id)
+        public int Remove(int id)
         {
             try
             {
@@ -64,7 +64,7 @@ namespace BackendAPI.Controllers
 
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                throw new Exception(ex.InnerException.Message);
             }
 
         }

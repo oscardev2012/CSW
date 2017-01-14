@@ -7,6 +7,9 @@ using System.Web.Mvc;
 using BackendAPI.Data;
 using System.Threading.Tasks;
 using BackendAPI.DTOs;
+using System.Web.Http;
+using System.Net.Http;
+using System.Net;
 
 namespace BackendAPI.Controllers
 {
@@ -19,6 +22,7 @@ namespace BackendAPI.Controllers
 
         #region  CRUD
         // GET api/book
+
         public IEnumerable<DTOBook> GetAll()
         {
             try
@@ -33,6 +37,13 @@ namespace BackendAPI.Controllers
 
 
         }
+        [System.Web.Http.HttpOptions]
+        public HttpResponseMessage Options()
+        {
+            var resp = new HttpResponseMessage(HttpStatusCode.OK);
+            return resp;
+        }
+
 
         // GET api/book
         public IEnumerable<Book> GetBookByAuthor(int authorId)
@@ -75,7 +86,7 @@ namespace BackendAPI.Controllers
         {
             try
             {
-                Task<int> resultAsync = Task.Run<int>(async () => await new BookDalc().UpdateAsync(id,name,authorId,categoryId));
+                Task<int> resultAsync = Task.Run<int>(async () => await new BookDalc().UpdateAsync(id, name, authorId, categoryId));
                 return resultAsync.Result;
 
             }
@@ -88,7 +99,8 @@ namespace BackendAPI.Controllers
 
 
         // DELETE api/book
-        public int Delete(int id)
+
+        public int Remove(int id)
         {
             try
             {
@@ -110,7 +122,7 @@ namespace BackendAPI.Controllers
         {
             try
             {
-                Task<int> resultAsync = Task.Run<int>(async () => await new BookDalc().InsertAsync(name,authorId,categoryId));
+                Task<int> resultAsync = Task.Run<int>(async () => await new BookDalc().InsertAsync(name, authorId, categoryId));
                 return resultAsync.Result;
 
             }
